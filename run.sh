@@ -11,4 +11,7 @@ echo "${LFA_BUILDS_SSH_KEY}" | base64 -d > "${HOME}/.ssh/id_ed25519" || exit 1
 
 touch file.txt
 
+mkdir -p "${HOME}/.ssh"
+cat builds.lfa.one.pub >> "$HOME/.ssh/known_hosts"
+
 scp -v -v -P 1022 file.txt travis-ci@builds.lfa.one:~/

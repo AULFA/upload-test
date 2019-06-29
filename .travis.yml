@@ -1,8 +1,5 @@
 language: bash
 
-addons:
-  ssh_known_hosts: builds.lfa.one:1022
-
 script:
   - ./run.sh
 
